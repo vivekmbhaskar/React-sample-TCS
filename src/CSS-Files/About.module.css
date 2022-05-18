@@ -1,0 +1,13 @@
+.aboutDiv h3{
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.aboutDiv p{
+    font-size: small;
+}
+
+
+.aboutDiv p:nth-child(2){
+    margin-bottom: 1rem;
+}

@@ -1,0 +1,29 @@
+.Header {
+  background-color: black;
+  color: white;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.Header a {
+  cursor: pointer;
+  color: white;
+  text-decoration: none;
+}
+
+.Header ul {
+  list-style: none;
+  display: flex;
+}
+
+.Header ul li {
+  margin: 0 1rem;
+  cursor: pointer;
+}
+
+.activeLink {
+  font-weight: bold;
+  font-size: 101%;
+}

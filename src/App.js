@@ -1,23 +1,36 @@
-import logo from './logo.svg';
+import { useContext, useEffect } from 'react';
 import './App.css';
+import Header from './components/Header';
+import { Routes, Route } from 'react-router-dom'
+import Homepage from './pages/Homepage';
+import About from './pages/About';
+import DetailPage from './pages/DetailPage';
+import Context from './Context'
+import Saved from './pages/Saved';
+
 
 function App() {
+  const ctx = useContext(Context)
+
+  const fetchUsers = async () => {
+    const response = await fetch('https://jsonplaceholder.typicode.com/users')
+    const data = await response.json()
+    ctx.setUsersData(data)
+  }
+
+  useEffect(() => {
+    fetchUsers().catch(err => console.log(err))
+  }, [])
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Header />
+      <Routes>
+        <Route path='/' element={<Homepage />} />
+        <Route path='/about' element={<About />} />
+        <Route path='/user/:userId' element={<DetailPage />} />
+        <Route path='/saved' element={<Saved />} />
+      </Routes>
     </div>
   );
 }

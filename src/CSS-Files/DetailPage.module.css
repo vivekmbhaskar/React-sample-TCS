@@ -1,0 +1,37 @@
+.detailDiv h3{
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.detailDiv p{
+    margin: 0.5rem 0;
+}
+
+.detailDiv p span{
+    font-weight: bold;
+}
+
+.detailDiv li{
+    list-style: none;
+    margin-left: 4rem;
+    font-style: italic;
+}
+
+.detailDiv button{
+    margin-top: 1rem;
+    margin-left: 85%;
+    background-color: black;
+    color: white;
+    padding: 0.25rem 1rem;
+    border-radius: 5px;
+}
+
+.detailDiv button:hover{
+    opacity: 0.9;
+    cursor: pointer;
+}
+
+.detailDiv button:disabled{
+    cursor: not-allowed;
+}
+

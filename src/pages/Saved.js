@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from 'react-redux'
 import { useNavigate } from 'react-router-dom'
 import Context from '../Context'
 import classes from '../CSS-Files/Saved.module.css'
-import { UserSliceActions } from '../Redux.js/UserSlice'
+import { UserSliceActions } from '../Redux/UserSlice'
 import { faTrash } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 

@@ -4,7 +4,7 @@ import { useParams } from 'react-router-dom'
 import Context from '../Context'
 import BoxWrapper from '../CSS-Files/BoxWrapper'
 import classes from '../CSS-Files/DetailPage.module.css'
-import { UserSliceActions } from '../Redux.js/UserSlice'
+import { UserSliceActions } from '../Redux/UserSlice'
 
 
 const DetailPage = () => {
